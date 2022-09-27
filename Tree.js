@@ -19,6 +19,18 @@ class Tree {
         return root;
     }
 
+    insert(data, current) {
+        if (current == null) return new Node(data);
+        if (current.data == data) return;
+
+        if (data < current.data) {
+            current.left = this.insert(data, current.left);
+        } else if (data > current.data) {
+            current.right = this.insert(data, current.right);
+        }
+        return current;
+    }
+
     prettyPrint(node = this.root, prefix = "", isLeft = true) {
         if (node.right) {
             this.prettyPrint(
@@ -39,4 +51,5 @@ class Tree {
 }
 
 const tt = new Tree([1, 2, 3, 4, 5, 6, 7, 8]);
+tt.insert(9, tt.root);
 tt.prettyPrint();

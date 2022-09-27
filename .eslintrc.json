@@ -5,5 +5,5 @@
         "prettier/prettier": "error",
         "indent": ["error", { "allowIndentationTabs": true }]
     },
-    "plugins": ["only-warn", "prettier"]
+    "plugins": ["prettier"]
 }

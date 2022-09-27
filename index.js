@@ -1,8 +1,8 @@
 class Node {
-    constructor(data) {
+    constructor(data, left = null, right = null) {
         this.data = data;
-        this.left = null;
-        this.right = null;
+        this.left = left;
+        this.right = right;
     }
 }
 export default Node;
