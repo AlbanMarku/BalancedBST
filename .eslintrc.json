@@ -1,8 +1,9 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "rules": {
-    "no-console": "off",
-    "prettier/prettier": "error"
-  },
-  "plugins": ["only-warn", "prettier"]
+    "extends": ["airbnb", "prettier"],
+    "rules": {
+        "no-console": "off",
+        "prettier/prettier": "error",
+        "indent": ["error", { "allowIndentationTabs": true }]
+    },
+    "plugins": ["only-warn", "prettier"]
 }

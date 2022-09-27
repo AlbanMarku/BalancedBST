@@ -1,36 +1,37 @@
 {
-  "name": "balancedbst",
-  "version": "1.0.0",
-  "description": "Balanced binary search tree",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlbanMarku/BalancedBST.git"
-  },
-  "keywords": [
-    "bst"
-  ],
-  "author": "Alban Marku",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlbanMarku/BalancedBST/issues"
-  },
-  "homepage": "https://github.com/AlbanMarku/BalancedBST#readme",
-  "devDependencies": {
-    "eslint": "^8.24.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-only-warn": "^1.0.3",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1"
-  }
+    "name": "balancedbst",
+    "version": "1.0.0",
+    "description": "Balanced binary search tree",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AlbanMarku/BalancedBST.git"
+    },
+    "keywords": [
+        "bst"
+    ],
+    "author": "Alban Marku",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AlbanMarku/BalancedBST/issues"
+    },
+    "homepage": "https://github.com/AlbanMarku/BalancedBST#readme",
+    "devDependencies": {
+        "eslint": "^8.24.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-only-warn": "^1.0.3",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.8",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.7.1"
+    },
+    "type": "module"
 }
