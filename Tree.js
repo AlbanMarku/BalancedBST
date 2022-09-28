@@ -54,6 +54,7 @@ class Tree {
                     return current;
                 }
             }
+            0;
         }
         return current;
     }
@@ -80,6 +81,27 @@ class Tree {
         }
     }
 
+    levelOrder(current, callback) {
+        if (current == null) return;
+
+        let queue = [];
+        let list = [];
+        queue.push(current);
+
+        while (queue.length != 0) {
+            let nodeItem = queue[0];
+            if (nodeItem) {
+                list.push(nodeItem.data);
+                if (nodeItem.left != null) queue.push(nodeItem.left);
+                if (nodeItem.right != null) queue.push(nodeItem.right);
+            }
+            callback(nodeItem.data);
+            queue.shift();
+        }
+
+        return console.log(list);
+    }
+
     prettyPrint(node = this.root, prefix = "", isLeft = true) {
         if (node.right) {
             this.prettyPrint(
@@ -97,7 +119,12 @@ class Tree {
             );
         }
     }
+
+    iamTheCallBackExample(data) {
+        console.log("Here is your data in a specified order " + data);
+    }
 }
 
 const tt = new Tree([1, 2, 3, 4, 5, 6, 7, 8]);
-tt.find(25, tt.root);
+tt.prettyPrint();
+tt.levelOrder(tt.root, tt.iamTheCallBackExample);
