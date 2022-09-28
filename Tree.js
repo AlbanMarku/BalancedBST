@@ -34,7 +34,7 @@ class Tree {
     delete(data, current) {
         if (current == null) return;
 
-        if (data < current.data && current.left) {
+        if (data < current.data) {
             current.left = this.delete(data, current.left);
         } else if (data > current.data) {
             current.right = this.delete(data, current.right);
@@ -66,6 +66,20 @@ class Tree {
         }
     }
 
+    find(data, current) {
+        if (current == null) return;
+
+        if (data < current.data && current.left) {
+            return this.find(data, current.left);
+        } else if (data > current.data && current.right) {
+            return this.find(data, current.right);
+        } else if (current.data == data) {
+            return console.log(current.data);
+        } else {
+            return console.log("Number not in tree.");
+        }
+    }
+
     prettyPrint(node = this.root, prefix = "", isLeft = true) {
         if (node.right) {
             this.prettyPrint(
@@ -86,5 +100,4 @@ class Tree {
 }
 
 const tt = new Tree([1, 2, 3, 4, 5, 6, 7, 8]);
-tt.delete(4, tt.root);
-tt.prettyPrint();
+tt.find(25, tt.root);
