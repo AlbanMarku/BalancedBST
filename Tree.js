@@ -31,6 +31,41 @@ class Tree {
         return current;
     }
 
+    delete(data, current) {
+        if (current == null) return;
+
+        if (data < current.data && current.left) {
+            current.left = this.delete(data, current.left);
+        } else if (data > current.data) {
+            current.right = this.delete(data, current.right);
+        } else {
+            if (current.data == data) {
+                if (current.left == null && current.right == null) {
+                    return null;
+                } else if (current.left == null) {
+                    return current.right;
+                } else if (current.right == null) {
+                    return current.left;
+                } else {
+                    let tempNode = this.findMin(current.left);
+                    current.data = tempNode.data;
+
+                    current.left = this.delete(tempNode.data, current.left);
+                    return current;
+                }
+            }
+        }
+        return current;
+    }
+
+    findMin(current) {
+        if (current.left) {
+            return this.findMin(current.left);
+        } else {
+            return current;
+        }
+    }
+
     prettyPrint(node = this.root, prefix = "", isLeft = true) {
         if (node.right) {
             this.prettyPrint(
@@ -51,5 +86,5 @@ class Tree {
 }
 
 const tt = new Tree([1, 2, 3, 4, 5, 6, 7, 8]);
-tt.insert(9, tt.root);
+tt.delete(4, tt.root);
 tt.prettyPrint();
